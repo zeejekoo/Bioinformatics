@@ -41,10 +41,3 @@ RNA-seq brain data:
 * **Mathematics & Clustering:** NumPy, SciPy, Scikit-learn
 * **Network Analysis:** NetworkX
 * **Visualization:** Matplotlib, Seaborn
-
-## 🚀 How to Run
-1. Clone this repository to your local machine.
-2. Ensure you have the required environment set up (managed via `uv` or standard `pip`).
-   ```bash
-   pip install scanpy numpy pandas matplotlib seaborn networkx scikit-learn
-   '''
