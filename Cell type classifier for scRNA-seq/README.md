@@ -16,7 +16,8 @@ Unlike standard clustering approaches, this model acts as a supervised annotator
 ## 🧠 Model Architecture
 The core model (`SCRNAClassifier`) is a fully connected neural network structured as follows:
 
-1. **Input Layer:** Matches the number of highly variable genes (HVGs).
+1. **Input Layer:** 50-dimensional PCA embeddings 
+   (derived from top 2,000 highly variable genes)
 2. **Hidden Block 1:** 512 units $\rightarrow$ BatchNorm1d $\rightarrow$ ReLU $\rightarrow$ Dropout (0.3)
 3. **Hidden Block 2:** 256 units $\rightarrow$ BatchNorm1d $\rightarrow$ ReLU $\rightarrow$ Dropout (0.3)
 4. **Hidden Block 3:** 128 units $\rightarrow$ BatchNorm1d $\rightarrow$ ReLU $\rightarrow$ Dropout (0.3)
@@ -45,10 +46,13 @@ The core model (`SCRNAClassifier`) is a fully connected neural network structure
 ---
 
 ## 📊 Evaluation & Monitoring
-*(Note: Include screenshots of your training logs or tensorboard plots here)*
-
-* **Validation Accuracy (`val_acc`):** Monitored at each epoch to ensure the model generalizes well to unseen cells.
-* **Validation Loss (`val_loss`):** Used to detect and prevent overfitting early in the training process.
+- Validation Accuracy and Loss monitored at each epoch via TensorBoard
+- Final inference performed on held-out test set (20%) using argmax 
+  over class probabilities
+- Predicted cell types mapped back to original biological labels 
+  via LabelEncoder inverse transform
+- Results visualized on UMAP alongside ground truth annotations 
+  for qualitative comparison
 
 ---
 
