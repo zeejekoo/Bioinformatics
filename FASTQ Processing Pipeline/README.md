@@ -12,10 +12,6 @@ and SAMtools for end-to-end FASTQ processing.
 
 ## 📌 Pipeline Overview
 
----
-
-## 📌 Pipeline Overview
-
 ```
 FASTQ files
     │
