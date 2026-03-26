@@ -1,4 +1,4 @@
-## [Project] High-Resolution Single-Cell Transcriptomics: Mouse Brain Analysis
+# High-Resolution Single-Cell Transcriptomics: Mouse Brain Analysis
 This project implements an end-to-end pipeline for single-cell RNA-seq (scRNA-seq) analysis, focusing on uncovering granular cellular diversity in brain tissue. Using the Scanpy ecosystem, I processed raw expression data into a biologically interpretable map, identifying distinct cell populations through high-resolution clustering.
 ## 🎯 Project Objectives
 - Standardized Preprocessing: Establish a robust QC and normalization workflow to mitigate technical noise.
@@ -33,9 +33,15 @@ This project implements an end-to-end pipeline for single-cell RNA-seq (scRNA-se
 - Statistical Ranking: Employed the t-test method within rank_genes_groups to identify the most significant markers for each population.
 
 - Visualization: Generated comprehensive Dot Plots to evaluate the specificity and sensitivity of the top 5 markers per cluster.
+### 5. Cell-Type Annotation
+- **CellTypist**: Applied pre-trained CellTypist models for automated 
+cell-type annotation, enabling biologically interpretable cluster labeling 
+beyond manual marker-based approaches.
+- Cross-validated annotations against cluster-specific DEGs to ensure 
+biological consistency.
 
 
-### 5. 📈 Key Visualizations
+### 6. 📈 Key Visualizations
 - QC Metrics: Pre- and post-filtering violin plots.
 
 - UMAP Projection: Cellular landscape colored by high-resolution Leiden clusters.
