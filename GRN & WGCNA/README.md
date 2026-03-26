@@ -1,9 +1,16 @@
-# Gene Regulatory Network (GRN) Construction & WGCNA Implementation
+# Cell-Type Deconvolution & Gene Regulatory Network (GRN) Analysis
 
 ## 🧬 Project Overview
-This repository demonstrates the manual construction of a **Gene Regulatory Network (GRN)** using the core mathematical principles of **Weighted Gene Co-expression Network Analysis (WGCNA)**. 
+This repository contains two interconnected analyses on single-cell 
+RNA-seq brain data:
 
-Instead of relying on automated black-box packages, this project implements the step-by-step matrix calculations (Correlation, Adjacency, TOM) from scratch using single-cell RNA-seq data. The goal is to identify and visualize tightly regulated gene modules within a specific cell type.
+1. **Cell-Type Deconvolution** — Estimating cell-type proportions 
+   from bulk expression data using GLM regression, CIBERSORT (NuSVR), 
+   and NMF, validated against ground truth distributions.
+2. **Gene Regulatory Network (GRN) via WGCNA-inspired approach** — 
+   Manual implementation of weighted gene co-expression network 
+   analysis from scratch, computing Correlation, Adjacency, and TOM 
+   matrices to identify co-expression modules in Endothelial cells.
 
 ## 🎯 Key Objectives & Analytical Workflow
 
@@ -27,21 +34,6 @@ Instead of relying on automated black-box packages, this project implements the 
 * **Graph Construction:** Utilized **NetworkX** to build a complex graph mapping the topological structure of the gene network.
 * **Centrality Mapping:** Scaled node sizes based on **Degree Centrality** to visually highlight the most influential "hub" genes within the endothelial regulatory network.
 
----
-
-## 📊 Visual Results
-
-*(Note: Add your output images to an `images/` folder in this repository to display them below)*
-
-### Gene Regulatory Network (GRN)
-![GRN Visualization](./images/network_plot.png)
-> *Figure 1: High-resolution network graph of the top 500 HVGs in Endothelial cells. Node sizes correspond to degree centrality, highlighting key regulatory hub genes.*
-
-### Correlation & TOM Heatmaps
-![TOM Matrix](./images/tom_heatmap.png)
-> *Figure 2: Heatmap representation of the Topological Overlap Matrix (TOM) showing clustered gene modules.*
-
----
 
 ## 💻 Tech Stack
 * **Language:** Python
@@ -55,3 +47,4 @@ Instead of relying on automated black-box packages, this project implements the 
 2. Ensure you have the required environment set up (managed via `uv` or standard `pip`).
    ```bash
    pip install scanpy numpy pandas matplotlib seaborn networkx scikit-learn
+   '''
