@@ -1,6 +1,16 @@
-# Task 6 — Automated FASTQ Processing Pipeline
+# NGS Data Processing Pipeline
 
-An automated NGS data processing pipeline written in Python that runs **FastQC**, **CutAdapt**, and **BWA-MEM2** sequentially on all FASTQ files in a given directory.
+A Python-based automated pipeline for Next-Generation Sequencing (NGS) 
+data preprocessing and alignment, integrating FastQC, CutAdapt, BWA-MEM2, 
+and SAMtools for end-to-end FASTQ processing.
+
+> Developed as part of Bioinformatics coursework at Pusan National University.  
+> Also includes implementations of core sequence analysis algorithms 
+> (edit distance, k-mer generation, FM-index).
+
+---
+
+## 📌 Pipeline Overview
 
 ---
 
